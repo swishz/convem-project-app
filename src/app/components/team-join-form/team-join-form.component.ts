@@ -8,16 +8,16 @@ import { HttpClient } from '@angular/common/http';
   encapsulation: ViewEncapsulation.None
 })
 export class TeamJoinFormComponent {
-  answer = '';
-  result = '';
-  showResult = false;
-  successMessage = "Você está mais próximo de se juntar ao time!";
-  errorMessage =  `Erro! Só aceitamos "SIM" como resposta.`;
+  answer: string = '';
+  result: string = '';
+  showResult: boolean = false;
+  successMessage: string = "Você está mais próximo de se juntar ao time!";
+  errorMessage: string =  `Erro! Só aceitamos "SIM" como resposta.`;
 
   constructor(private http: HttpClient) {}
 
   confirm() {
-    let apiEndpoint = 'https://6421bc3386992901b2baf3b0.mockapi.io/answer?message=';
+    let apiEndpoint: string = 'https://6421bc3386992901b2baf3b0.mockapi.io/answer?message=';
     
     if (this.answer.toLowerCase() === 'sim') {
       apiEndpoint += 'success';
