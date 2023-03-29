@@ -1,12 +1,24 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { TeamJoinFormComponent } from './components/team-join-form/team-join-form.component';
+import { MatInputModule } from '@angular/material/input'
+import { MatButtonModule } from '@angular/material/button'
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, MatInputModule, MatButtonModule,MatFormFieldModule, FormsModule,BrowserAnimationsModule],
       declarations: [
-        AppComponent
+        AppComponent,
+        TeamJoinFormComponent
       ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   });
 
@@ -20,12 +32,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('convem-project-app');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('convem-project-app app is running!');
   });
 });

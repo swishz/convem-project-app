@@ -1,0 +1,49 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+.card-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  height: 300px;
+  width: 700px;
+  background-color: rgb(130,51,139);
+  color: rgb(118,199,210);
+  border-radius: 20px;
+}
+
+.result{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.answer-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  max-width: 500px;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+}
+
+.input-container {
+  width: 100%;
+  cursor: pointer;
+}
+
+.message-container{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.confirm-button{
+  cursor: pointer;
+}
